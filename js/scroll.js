@@ -1,9 +1,11 @@
-const linksRef = document.querySelectorAll('.header-menu__item a');
+const scrollFunc = () => {
+    const linksRef = document.querySelectorAll('.header-menu__item a');
 const cardLinkRef = document.querySelector('.card-details__link-characteristics');
 
+const newArray = [...linksRef, cardLinkRef];
 seamless.polyfill();
 
-linksRef.forEach((element) => {
+newArray.forEach((element) => {
 element.addEventListener('click',(e) => {
 e.preventDefault();
 
@@ -24,19 +26,6 @@ if(section) {
 }
 }) 
 })
-
-cardLinkRef.addEventListener('click', (e) => {
-    e.preventDefault;
-if(cardLinkRef) {
-    seamless.elementScrollIntoView(cardLinkRef, {
-        behavior: "smooth",
-        block: 'start',
-    })
-} else {
-    seamless.elementScrollIntoView(document.querySelector("#characteristics"), {
-        behavior: "smooth",
-        block: "center",
-        inline: "center",
-    });
 }
-})
+
+scrollFunc();
