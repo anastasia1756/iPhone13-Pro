@@ -30,7 +30,7 @@ const tabsFunc = () => {
     const { memory, name, price, image } = tabsOptions[idx];
 
     tabsTitleRef.textContent = `Смартфон Apple iPhone 13 Pro ${memory}GB ${name}`;
-    priceRef.textContent = `${price}₽`;
+    priceRef.textContent = `${price}₴`;
     imgRef.setAttribute('src', image);
     titleRef.textContent = `${name} iPhone`;
   };
